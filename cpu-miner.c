@@ -1917,6 +1917,7 @@ static void show_credits()
 	printf("ZNY donation address: Zq83XMtc9gShkgi4bNNHWA4FDbMe8dFQmD (macchky)\n");
 	printf("** yespower 0.5 support by cryptozeny@github **\n");
 	printf("ZNY donation address: ZyWJL5qp3qZQW85HVoT3ba2feJYsZ7aQ2v (cryptozeny)\n\n");
+	printf("** yespower 1.0 support by whiveio@github **\n");
 }
 
 int main(int argc, char *argv[])

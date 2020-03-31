@@ -133,9 +133,6 @@ Also many issues and FAQs are covered in the forum thread
 dedicated to this program,
 	https://bitcointalk.org/index.php?topic=55038.0
 
-Donations
----------
 
-BitZeny : Zq83XMtc9gShkgi4bNNHWA4FDbMe8dFQmD
 
 Happy mining!

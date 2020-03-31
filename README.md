@@ -1,8 +1,8 @@
-This is a multi-threaded CPU miner for BitZeny adding support `yespower` + `yescrypt`, fork of macchky's cpuminer v2.6.0.
+This is a multi-threaded CPU miner for Whive adding support `yespower` + `yescrypt`, fork of macchky's & cryptozeny cpuminer v2.6.0.
 
 License: GPLv2. See COPYING for details.
 
-Git tree: https://github.com/macchky/cpuminer  
+Git tree: https://github.com/macchky/cpuminer  https://github.com/cryptozeny/cpuminer-mc-yespower
 
 *****
 # Impact
@@ -157,17 +157,8 @@ TODO:
 本人の財布アドレス、および正しいポート番号を使用してください。  
 Please use your own wallet address and correct port number.  
 
-### 채굴 설명서 マイニングマニュアル Mining Manual
-https://github.com/semipool/zny.semi-pool.com/blob/master/README.md
 
 *****
 
-# Donations
-
-cpuminer-mc 2.6.0 by macchky@github  
-ZNY donation address: `Zq83XMtc9gShkgi4bNNHWA4FDbMe8dFQmD` (macchky)
-
-yespower 0.5 support by cryptozeny@github    
-ZNY donation address: `ZyWJL5qp3qZQW85HVoT3ba2feJYsZ7aQ2v` (cryptozeny)
 
 Happy Mining!
