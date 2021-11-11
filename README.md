@@ -27,8 +27,8 @@ http://www.openwall.com/yescrypt/
 full support yespower + yescrypt
 ```bash
 cd && \
-git clone https://github.com/cryptozeny/cpuminer-mc-yespower.git && \
-cd cpuminer-mc-yespower && \
+git clone https://github.com/whiveio/whive-cpuminer-mc-yespower.git && \
+cd whive-cpuminer-mc-yespower && \
 sudo apt-get install build-essential libcurl4-openssl-dev && \
 ./build.sh
 ```
@@ -37,8 +37,8 @@ sudo apt-get install build-essential libcurl4-openssl-dev && \
 full support yespower + yescrypt
 ```bash
 cd && \
-git clone https://github.com/cryptozeny/cpuminer-mc-yespower.git && \
-cd cpuminer-mc-yespower && \
+git clone https://github.com/whiveio/whive-cpuminer-mc-yespower.git && \
+cd whive-cpuminer-mc-yespower && \
 sudo apt-get install build-essential libcurl4-openssl-dev && \
 ./build-aarch64.sh
 ```
@@ -47,8 +47,8 @@ sudo apt-get install build-essential libcurl4-openssl-dev && \
 no yespower yet. please use `-a yescrypt` option until next release.
 ```bash
 cd && \
-git clone https://github.com/cryptozeny/cpuminer-mc-yespower.git && \
-cd cpuminer-mc-yespower && \
+git clone https://github.com/whiveio/whive-cpuminer-mc-yespower.git && \
+cd whive-cpuminer-mc-yespower && \
 sudo apt-get install build-essential libcurl4-openssl-dev && \
 ./build-ARMv7l.sh
 ```
@@ -61,7 +61,7 @@ TODO:
 Native Version
 ```bash
 cd && \
-cd cpuminer-mc-yespower && \
+cd whive-cpuminer-mc-yespower && \
 sudo apt-get install gcc-mingw-w64 && \
 cd depend && \
 sh depend-curl-7_40_0.sh && \
@@ -79,7 +79,7 @@ TODO:
 Native Version
 ```bash
 cd && \
-cd cpuminer-mc-yespower && \
+cd whive-cpuminer-mc-yespower && \
 sudo apt-get install gcc-mingw-w64 && \
 cd depend && \
 sh depend-curl-7_40_0.sh && \
