@@ -150,6 +150,13 @@ minerd.exe -a yescrypt --benchmark -q
 ### MacOS
 TODO:
 
+### Docker 
+
+To download the Dockerfile, [click here](Dockerfile?raw=1).
+```bash
+docker build -f Dockerfile -t cpuminerx .
+```
+
 *****
 
 # 주의 注意 WARNING
