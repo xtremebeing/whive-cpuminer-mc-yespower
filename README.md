@@ -150,7 +150,9 @@ minerd.exe -a yescrypt --benchmark -q
 ### MacOS
 TODO:
 
-### Docker 
+*****
+
+# Docker 
 
 To download the Dockerfile, [click here](Dockerfile?raw=1).
 
@@ -167,15 +169,17 @@ To run a named continer run the following (replacing IP, COINADDR, user and pass
 ```
 Check docker stats
 
-```bash docker stats
+```bash 
+docker stats
 ```
 
 Tail the container logs
 
-```bash docker logs cpuminer1 -f
+```bash 
+docker logs cpuminer1 -f
 ```
 
-
+*****
 
 
 
