@@ -1,22 +1,34 @@
+FROM alpine:3.14 as stage1
+
+# Dockerfile to build Whive yespower cpuminer
 #
-# Dockerfile for cpuminer
-# usage: docker run creack/cpuminer --url xxxx --user xxxx --pass xxxx
-# ex: docker run creack/cpuminer --url stratum+tcp://ltc.pool.com:80 --user creack.worker1 --pass abcdef
+# Build:
+# docker build -f Dockerfile -t cpuminer .
 #
+# Run:
+# docker run cpuminer --url stratum+tcp://miningpool.example.com:80 --user user.worker --pass abcdef
+#
+# Run with imposing cpu limit and 2 threads
+# docker run --cpus=".2" cpuminer --url stratum+tcp://miningpool.example.com:80 --user user.worker --pass abcdef -t2 
 #
 
-FROM            ubuntu:14.04
-MAINTAINER      Guillaume J. Charmes <guillaume@charmes.net>
+RUN apk update && \
+    apk add --no-cache gcc make automake autoconf pkgconfig libcurl curl-dev libc-dev git
 
-RUN             apt-get update -qq && \
-                apt-get install -qqy automake libcurl4-openssl-dev git make
+RUN git clone https://github.com/whiveio/cpuminer-mc-yespower.git cpuminer
 
-RUN             git clone https://github.com/pooler/cpuminer
+RUN cd cpuminer && \
+    make clean ; \
+    ./autogen.sh && \
+    ./nomacro.pl && \
+    ./configure CFLAGS="-O3 -march=native" && \
+    make
 
-RUN             cd cpuminer && \
-                ./autogen.sh && \
-                ./configure CFLAGS="-O3" && \
-                make
-
-WORKDIR         /cpuminer
-ENTRYPOINT      ["./minerd"]
+FROM alpine:3.14
+LABEL author="tcarter@entrusion.com"
+LABEL description="Dockerfile to build Whive yespower cpuminer"
+LABEL version="1.0"
+WORKDIR /cpuminer
+COPY --from=stage1 /cpuminer/minerd /cpuminer
+RUN apk add --no-cache libcurl
+ENTRYPOINT ["./minerd"]
