@@ -154,16 +154,17 @@ TODO:
 
 # Docker 
 
-To download the Dockerfile, [click here](Dockerfile?raw=1).
+Download the Dockerfile, [click here](Dockerfile?raw=1).
 
-To build the container run the following
+Build the container :
 
 ```bash
-docker build -f Dockerfile -t cpuminerx .
+docker build -f Dockerfile -t cpuminer .
 ```
-To run a named continer run the following (replacing IP, COINADDR, user and password) :
+Run a named continer  (replacing IP, COINADDR, user and password) :
 
-```bash docker run -d --rm --cpus=".2" --name cpuminer1 cpuminer -a yespower \
+```bash 
+docker run -d --rm --cpus=".2" --name cpuminer1 cpuminer -a yespower \
 -o http://IP:1867 -u user -p password \
 --coinbase-addr=COINADDR -t2 
 ```
@@ -178,13 +179,6 @@ Tail the container logs
 ```bash 
 docker logs cpuminer1 -f
 ```
-
-*****
-
-
-
-
-
 
 
 *****
