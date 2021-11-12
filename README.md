@@ -153,9 +153,35 @@ TODO:
 ### Docker 
 
 To download the Dockerfile, [click here](Dockerfile?raw=1).
+
+To build the container run the following
+
 ```bash
 docker build -f Dockerfile -t cpuminerx .
 ```
+To run a named continer run the following (replacing IP, COINADDR, user and password) :
+
+```bash docker run -d --rm --cpus=".2" --name cpuminer1 cpuminer -a yespower \
+-o http://IP:1867 -u user -p password \
+--coinbase-addr=COINADDR -t2 
+```
+Check docker stats
+
+```bash docker stats
+```
+
+Tail the container logs
+
+```bash docker logs cpuminer1 -f
+```
+
+
+
+
+
+
+
+
 
 *****
 
